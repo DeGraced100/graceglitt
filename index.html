@@ -207,6 +207,19 @@ I’m a Software Developer specializing in enterprise desktop apps, websites, an
 
               </div>
             </form>
+             <!-- Form Handler Script -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(function(response) {
+          alert('Email sent successfully!');
+        }, function(error) {
+          alert('Failed to send email. Please try again.');
+        });
+    });
+  </script>
           </div><!-- End Contact Form -->
 
         </div>
